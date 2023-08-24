@@ -1,0 +1,44 @@
+@import '../../../Assets/variables';
+@import '../../../mixins';
+
+.POS-container {
+  @include flex(flex, flex-start, space-between);
+  width: 100%;
+  height: 100vh;
+  background: $base-light-color;
+  box-sizing: border-box;
+
+  .content-area {
+    width: 75%;
+    height: 100%;
+    padding: 20px;
+    @include boxsizing(border-box);
+    overflow-y: scroll;
+
+    .content-area-header {
+      width: 100%;
+      @include flex(flex, center);
+      .content-prefix {
+        width: 60%;
+      }
+      .content-suffix {
+        width: 40%;
+      }
+    }
+
+    .content-body-container {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-auto-rows: auto;
+      grid-gap: 1rem;
+    }
+  }
+
+  .cart-area {
+    width: 25%;
+    height: 100%;
+    background: $base-white-color;
+    padding: 20px;
+    @include boxsizing(border-box);
+  }
+}

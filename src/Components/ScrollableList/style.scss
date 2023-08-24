@@ -1,0 +1,30 @@
+@import '../../mixins';
+@import '../../Assets/variables';
+
+.scrollable-list-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  column-gap: 20px;
+  cursor: pointer;
+
+  .category-card {
+    width: 100px;
+    height: 120px;
+    background-color: $base-white-color;
+    border-radius: 20px;
+    border: 1px solid grey;
+    @include flex(flex, center, center, column);
+
+    img {
+      width: 40px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .active {
+    background-color: $primary-color;
+    border: 1px solid $primary-color;
+    color: $base-light-color;
+  }
+}
